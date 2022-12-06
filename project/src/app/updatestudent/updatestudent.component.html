@@ -1,0 +1,64 @@
+<div
+  class="my-5 mx-auto w-50 alert alert-primary itemcenter"
+  *ngIf="student; else falsediv"
+>
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      aria-label="Username"
+      placeholder="Username"
+      aria-describedby="basic-addon1"
+      [value]="student.name"
+      #name
+    />
+  </div>
+  <div class="input-group mb-3">
+    <input
+      type="number"
+      class="form-control"
+      placeholder="Age"
+      aria-label="Age"
+      aria-describedby="basic-addon1"
+      [value]="student.age"
+      #age
+    />
+  </div>
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Email"
+      aria-label="Email"
+      aria-describedby="basic-addon2"
+      [value]="student.email"
+      #email
+    />
+    <span class="input-group-text" id="basic-addon2">@example.com</span>
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">$</span>
+    <input
+      type="number"
+      placeholder="Salery"
+      class="form-control"
+      aria-label="Amount (to the nearest dollar)"
+      [value]="student.salary"
+      #salary
+    />
+    <span class="input-group-text">.00</span>
+  </div>
+  <div class="btn btn-primary">
+    <input
+      class="btn"
+      type="button"
+      value="update Student"
+      (click)="
+        updatestudent(name.value, +age.value, email.value, +salary.value)
+      "
+      routerLink="/students"
+    />
+  </div>
+</div>
+<ng-template #falsediv> <i class="fa-solid fa-spinner"></i> </ng-template>

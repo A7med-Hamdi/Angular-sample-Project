@@ -1,0 +1,46 @@
+{
+  "students": [
+    {
+      "name": "ahmedhamdi",
+      "age": 20,
+      "email": "ahmed@gmail.com",
+      "salary": 10000,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "mhmd",
+      "age": 20,
+      "email": "mhmd@gmail.com",
+      "salary": 11000
+    },
+    {
+      "id": 3,
+      "name": "hassan",
+      "age": 20,
+      "email": "hassan@gmail.com",
+      "salary": 12000
+    },
+    {
+      "id": 4,
+      "name": "mona",
+      "age": 20,
+      "email": "mona@gmail.com",
+      "salary": 13000
+    },
+    {
+      "name": "sara ",
+      "age": 20,
+      "email": "sara@gmail.com",
+      "salary": 2000,
+      "id": 5
+    },
+    {
+      "name": "hoda",
+      "age": 30,
+      "email": "hoda@gmail.com",
+      "salary": 52100,
+      "id": 6
+    }
+  ]
+}

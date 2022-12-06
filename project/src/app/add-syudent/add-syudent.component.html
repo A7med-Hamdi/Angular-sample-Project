@@ -1,0 +1,56 @@
+<div class="my-5 mx-auto w-50 alert alert-primary itemcenter">
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      aria-label="Username"
+      placeholder="Username"
+      aria-describedby="basic-addon1"
+      #name
+    />
+  </div>
+  <div class="input-group mb-3">
+    <input
+      type="number"
+      class="form-control"
+      placeholder="Age"
+      aria-label="Age"
+      aria-describedby="basic-addon1"
+      #age
+    />
+  </div>
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Email"
+      aria-label="Email"
+      aria-describedby="basic-addon2"
+      #email
+    />
+    <span class="input-group-text" id="basic-addon2">@example.com</span>
+  </div>
+
+  <div class="input-group mb-3">
+    <span class="input-group-text">$</span>
+    <input
+      type="number"
+      placeholder="Salery"
+      class="form-control"
+      aria-label="Amount (to the nearest dollar)"
+      #salary
+    />
+    <span class="input-group-text">.00</span>
+  </div>
+  <div class="btn btn-primary">
+    <input
+      class="btn"
+      type="button"
+      value="Add Student"
+      (click)="
+        addNewStudent(name.value, +age.value, email.value, +salary.value)
+      "
+      routerLink="/students"
+    />
+  </div>
+</div>

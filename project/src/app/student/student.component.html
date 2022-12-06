@@ -1,0 +1,36 @@
+<table
+  class="table w-75 m-auto my-5 table-bordered table-striped itemcenter"
+  *ngIf="students; else falsediv"
+>
+  <thead class="bg-primary">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Eamil</th>
+    <th>Salery</th>
+    <th></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of students">
+      <td>{{ s.id }}</td>
+      <td>
+        <a routerLink="/student/{{ s.id }}">{{ s.name }}</a>
+      </td>
+      <td>{{ s.age }}</td>
+      <td>{{ s.email }}</td>
+      <td>{{ s.salary }}</td>
+      <td>
+        <button class="btn btn-primary" routerLink="/update/{{ s.id }}">
+          Update
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="deletestudent(s.id)">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<ng-template #falsediv> <i class="fa-solid fa-spinner"></i> </ng-template>
